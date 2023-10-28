@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+}
+.container {
+  max-width: 550px;
+  padding: 10px;
+}
+
+.container img {
+  max-width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.container h1 {
+  color: white;
+  font-weight: 500;
+}
+.container p {
+  color: white;
+  margin: 15px 0;
+}
+
+.btn {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: green;
+  color: white;
+}
+
+.lowercontainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+.active.lowercontainer {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.lowercontainer video {
+  position: relative;
+  max-width: 900px;
+  outline: none;
+}
+
+.close-icon {
+  background-color: green;
+  padding: 0.4rem;
+  border-radius: 45%;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+.close-icon:hover {
+  background-color: #fff;
+  color: green;
+}
+
+@media (max-width: 990px) {
+  .lowercontainer video {
+    max-width: 90%;
+  }
+}
